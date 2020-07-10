@@ -510,7 +510,8 @@ mark,
 }
 
 .img-fluid {
-  max-width: 100%;
+  max-width: 50%;
+  background-size: cover;
   height: auto;
 }
 
@@ -13244,7 +13245,7 @@ textarea.form-control {
 .user-img {
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+
 }
 
 .image-popup {
