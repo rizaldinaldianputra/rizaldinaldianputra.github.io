@@ -1,440 +1,552 @@
-<html>
+<!doctype html>
+<html lang="en">
 
 <head>
-    <center>
-        <title> Ranger Orange </title>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <meta property="og:title" content="">
-        <meta property="og:description" content="RangerOrangeGreen" />
-        <meta content="" name="Abstract">
-        <meta name="">
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="js/jquery.js"></script>
-        <script type="text/javascript" src="js/jquery-1.10.2.min.js.download"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        <style type="text/css">
-            /* latin */
-            @font-face {
-                font-family: 'Iceberg';
-                font-style: normal;
-                font-weight: 400;
-                src: local('Iceberg'), local('Iceberg-Regular'), url(https://fonts.gstatic.com/s/iceberg/v7/8QIJdijAiM7o-qnZiI8EqprnEO0.woff2) format('woff2');
-                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-            }
-        </style>
-        <style type="text/css">
-            /* latin */
-            @font-face {
-                font-family: 'Wallpoet';
-                font-style: normal;
-                font-weight: 400;
-                src: local('Wallpoet'), url(https://fonts.gstatic.com/s/wallpoet/v11/f0X10em2_8RnXVVdUObp58Tt868H.woff2) format('woff2');
-                unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-            }
-        </style>
-        <style type="text/css">
-            @import url('https://fonts.googleapis.com/css?family=Nunito');
-            @import url('https://fonts.googleapis.com/css?family=Poiret+One');
-
-            body,
-            html {
-                height: 100%;
-                background-repeat: no-repeat;
-                /*background-image: linear-gradient(rgb(12, 97, 33),rgb(104, 145, 162));*/
-                background: black;
-                position: relative;
-            }
-
-            #particles-js {
-                width: 100%;
-                height: 100%;
-                background-size: cover;
-                background-position: 50% 50%;
-                position: fixed;
-                top: 0px;
-                z-index: 1;
-            }
-
-            h1 {
-                font: 1.5em Cinzel, serif;
-                font-weight: 400;
-                letter-spacing: .35em;
-                text-shadow: 0 0 25px rgba(254, 254, 255, .85);
-                width: 70%
-            }
-
-
-            footer {
-                margin: 20%;
-            }
-
-            /* #a {
-                onmousedown: stop;
-                animation-name: rotate;
-                animation-duration: 5s;
-                animation-play-state: running;
-                animation-timing-function: linear;
-                animation-iteration-count: infinite;
-                opacity: 1.0;
-                filter: alpha(opacity=50);
-            } */
-
-            img:hover {
-                opacity: 1.0;
-                filter: alpha(opacity=100);
-            }
-
-            @keyframes rotate {
-                10% {
-                    transform: rotateY(36deg)
-                }
-
-                20% {
-                    transform: rotateY(72deg)
-                }
-
-                30% {
-                    transform: rotateY(108deg)
-                }
-
-                40% {
-                    transform: rotateY(144deg)
-                }
-
-                50% {
-                    transform: rotateY(180deg)
-                }
-
-                60% {
-                    transform: rotateY(216deg)
-                }
-
-                70% {
-                    transform: rotateY(252deg)
-                }
-
-                80% {
-                    transform: rotateY(288deg)
-                }
-
-                90% {
-                    transform: rotateY(324deg)
-                }
-
-                100% {
-                    transform: rotateY(360deg)
-                }
-            }
-        </style>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="img/favicon.png" type="image/png">
+	<title>Satner Portfolio</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="vendors/linericon/style.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+	<!-- main css -->
+	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <frame width="0" height="0" scrolling="no" frameborder="no" allow="autoplay" <!-- <body
-        background="http://i50.tinypic.com/154x5s1.gif &#10;" title="RANGER ORANGE GREEN" bgcolor="black"><iframe
-            width="0" height="0" src="https://2.top4top.net/m_1233zuxl00.mp3" frameborder="0" allowfullscreen></iframe>
-        <style type="text/css">
-            .blink_me {
-                font-size: 40px;
-                -webkit-animation-name: blinker;
-                -webkit-animation-duration: 2s;
-                -webkit-animation-timing-function: linear;
-                -webkit-animation-iteration-count: infinite;
-                -moz-animation-name: blinker;
-                -moz-animation-duration: 2s;
-                -moz-animation-timing-function: linear;
-                -moz-animation-iteration-count: infinite;
-                animation-name: blinker;
-                animation-duration: 1s;
-                animation-timing-function: linear;
-                animation-iteration-count: infinite;
-            }
 
-            @-moz-keyframes blinker {
-                0% {
-                    opacity: 1.0;
-                }
+	<!--================ Start Header Area =================-->
+	<header class="header_area">
+		<div class="main_menu">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav justify-content-end">
+							<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+							<li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>							
+							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!--================ End Header Area =================-->
 
-                50% {
-                    opacity: 0.0;
-                }
+	<!--================ Start Home Banner Area =================-->
+	<section class="home_banner_area">
+		<div class="banner_inner">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-7">
+						<div class="banner_content">
+							<h3 class="text-uppercase">Hell0</h3>
+							<h1 class="text-uppercase">Rizaldi Naldian</h1>
+							<h5 class="text-uppercase">Mobile Developer</h5>
+							<div class="d-flex align-items-center">
+								<a class="primary_btn" href="#"><span>Hire Me</span></a>
+								<a class="primary_btn tr-bg" href="#"><span>Get CV</span></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-5">
+						<div class="home_right_img">
+							<img class="" src="img/banner/home-right.png" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Home Banner Area =================-->
 
-                100% {
-                    opacity: 1.0;
-                }
-            }
+	<!--================ Start About Us Area =================-->
+	<section class="about_area section_gap">
+		<div class="container">
+			<div class="row justify-content-start align-items-center">
+				<div class="col-lg-5">
+					<div class="about_img">
+						<img class="" src="img/about-us.png" alt="">
+					</div>
+				</div>
 
-            @-webkit-keyframes blinker {
-                0% {
-                    opacity: 1.0;
-                }
+				<div class="offset-lg-1 col-lg-5">
+					<div class="main_title text-left">
+						<h2>let’s <br>
+							Introduce about <br>
+							myself</h2>
+						<p>
+							Whose given. Were gathered. There first subdue greater. Bearing you Whales heaven 
+							midst their. Beast creepeth. Fish days.
+						</p>
+						<p>
+							Is give may shall likeness made yielding spirit a itself together created after sea 
+							is in beast beginning signs open god you're gathering whose gathered cattle let. 
+							Creature whales fruit unto meat the life beginning all in under give two.
+						</p>
+						<a class="primary_btn" href="#"><span>Download CV</span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End About Us Area =================-->
 
-                50% {
-                    opacity: 0.0;
-                }
+	<!--================ Srart Brand Area =================-->
+	<section class="brand_area section_gap_bottom">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-6">
+					<div class="row">
+						<div class="col-lg-4 col-md-4 col-sm-6">
+							<div class="single-brand-item d-table">
+								<div class="d-table-cell text-center">
+									<img src="img/brands/logo1.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6">
+							<div class="single-brand-item d-table">
+								<div class="d-table-cell text-center">
+									<img src="img/brands/logo2.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6">
+							<div class="single-brand-item d-table">
+								<div class="d-table-cell text-center">
+									<img src="img/brands/logo3.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6">
+							<div class="single-brand-item d-table">
+								<div class="d-table-cell text-center">
+									<img src="img/brands/logo4.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6">
+							<div class="single-brand-item d-table">
+								<div class="d-table-cell text-center">
+									<img src="img/brands/logo5.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6">
+							<div class="single-brand-item d-table">
+								<div class="d-table-cell text-center">
+									<img src="img/brands/logo6.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6">
+							<div class="single-brand-item d-table">
+								<div class="d-table-cell text-center">
+									<img src="img/brands/logo7.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6">
+							<div class="single-brand-item d-table">
+								<div class="d-table-cell text-center">
+									<img src="img/brands/logo8.png" alt="">
+								</div>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-6">
+							<div class="single-brand-item d-table">
+								<div class="d-table-cell text-center">
+									<img src="img/brands/logo9.png" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="offset-lg-2 col-lg-4 col-md-6">
+					<div class="client-info">
+						<div class="d-flex mb-50">
+							<span class="lage">5</span>
+							<span class="smll">Years Experience Working</span>
+						</div>
+						<div class="call-now d-flex">
+							<div>
+								<span class="fa fa-phone"></span>
+							</div>
+							<div class="ml-15">
+								<p>call us now</p>
+								<h3>+6281380244442</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Brand Area =================-->
 
-                100% {
-                    opacity: 1.0;
-                }
-            }
+	<!--================ Start Features Area =================-->
+	<section class="features_area">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-8 text-center">
+					<div class="main_title">
+						<h2>service offers </h2>
+						<p>
+							Is give may shall likeness made yielding spirit a itself togeth created 
+							after sea <br> is in beast beginning signs open god you're gathering ithe
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="row feature_inner">
+				<div class="col-lg-3 col-md-6">
+					<div class="feature_item">
+						<img src="img/services/s1.png" alt="">
+						<h4>Web Developing</h4>
+						<p>Static & Dynamis</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="feature_item">
+						<img src="img/services/s2.png" alt="">
+						<h4>IOS Mobile</h4>
+						<p> Build Anything Version IOS</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="feature_item">
+						<img src="img/services/s3.png" alt="">
+						<h4>Android Mobile</h4>
+						<p>Build Anything Version Android</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="feature_item">
+						<img src="img/services/s4.png" alt="">
+						<h4>Desktop</h4>
+						<p>Macbook, Linux & Window</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Features Area =================-->
 
-            @keyframes blinker {
-                0% {
-                    opacity: 1.0;
-                }
+	<!--================Start Portfolio Area =================-->
+	<section class="portfolio_area section_gap_top" id="portfolio"></section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="main_title text-left">
+                        <h2>quality work <br>
+                            Recently done project </h2>
+                    </div>
+                </div>
+            </div>
+        
+    
+            <div class="filters-content">
+				<div class="row portfolio-grid justify-content-center">
+					<div class="col-lg-4 col-md-6 all latest">
+						<div class="portfolio_box">
+							<div class="single_portfolio">
+								<img class="img-fluid w-100" src="img/portfolio/ecommerce.jpg" alt="">
+								<div class="overlay"></div>
+								<a href="img/portfolio/ecommerce.jpg" class="img-gal">
+									<div class="icon">
+										<span class="lnr lnr-cross"></span>
+									</div>
+								</a>
+							</div>
+							<div class="short_info">
+								<h4><a href="portfolio-details.html">E-Commerce</a></h4>
+								<p>Sinar12</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 all popular">
+						<div class="portfolio_box">
+							<div class="single_portfolio">
+								<img class="img-fluid w-100" src="img/portfolio/erp.jpg" alt="">
+								<div class="overlay"></div>
+								<a href="img/portfolio/erp.jpg" class="img-gal">
+									<div class="icon">
+										<span class="lnr lnr-cross"></span>
+									</div>
+								</a>
+							</div>
+							<div class="short_info">
+								<h4><a href="portfolio-details.html">System ERP</a></h4>
+								<p>Sinar12</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 all latest">
+						<div class="portfolio_box">
+							<div class="single_portfolio">
+								<img class="img-fluid w-100" src="img/portfolio/hrsystem-web.jpg" alt="">
+								<div class="overlay"></div>
+								<a href="img/portfolio/hrsystem-web.jpg" class="img-gal">
+									<div class="icon">
+										<span class="lnr lnr-cross"></span>
+									</div>
+								</a>
+							</div>
+							<div class="short_info">
+								<h4><a href="portfolio-details.html">Hrsystem Web</a></h4>
+								<p>CMM Group</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 all popular">
+						<div class="portfolio_box">
+							<div class="single_portfolio">
+								<img class="img-fluid w-100" src="img/portfolio/hrsystem.jpg" alt="">
+								<div class="overlay"></div>
+								<a href="img/portfolio/hrsystem.jpg" class="img-gal">
+									<div class="icon">
+										<span class="lnr lnr-cross"></span>
+									</div>
+								</a>
+							</div>
+							<div class="short_info">
+								<h4><a href="portfolio-details.html">mOBILE HRSYSTEM</a></h4>
+								<p>CMM GROUP</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 all following">
+						<div class="portfolio_box">
+							<div class="single_portfolio">
+								<img class="img-fluid w-100" src="img/portfolio/pos.jpg" alt="">
+								<div class="overlay"></div>
+								<a href="img/portfolio/pos.jpg" class="img-gal">
+									<div class="icon">
+										<span class="lnr lnr-cross"></span>
+									</div>
+								</a>
+							</div>
+							<div class="short_info">
+								<h4><a href="portfolio-details.html">Point Of Sale</a></h4>
+								<p>Retail Sinar12</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 all upcoming">
+						<div class="portfolio_box">
+							<div class="single_portfolio">
+								<img class="img-fluid w-100" src="img/portfolio/ticketing.jpg" alt="">
+								<div class="overlay"></div>
+								<a href="img/portfolio/ticketing.jpg" class="img-gal">
+									<div class="icon">
+										<span class="lnr lnr-cross"></span>
+									</div>
+								</a>
+							</div>
+							<div class="short_info">
+								<h4><a href="portfolio-details.html">Ticketing</a></h4>
+								<p>Anniversary SR12</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-4 col-md-6 all upcoming following">
+						<div class="portfolio_box">
+							<div class="single_portfolio">
+								<img class="img-fluid w-100" src="img/portfolio/whell.png" alt="">
+								<div class="overlay"></div>
+								<a href="img/portfolio/whell.png" class="img-gal">
+									<div class="icon">
+										<span class="lnr lnr-cross"></span>
+									</div>
+								</a>
+							</div>
+							<div class="short_info">
+								<h4><a href="portfolio-details.html">E-Commerce Car</a></h4>
+								<p>Whell World ecommerce</p>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+        </div>
+    </section>
+	<!--================End Portfolio Area =================-->
 
-                50% {
-                    opacity: 0.0;
-                }
+	<!--================ Start Testimonial Area =================-->
+	<div class="testimonial_area section_gap_bottom">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-8 text-center">
+					<div class="main_title">
+						<h2>client say about me</h2>
+						<p>Is give may shall likeness made yielding spirit a itself togeth created after sea is in beast <br>
+							 beginning signs open god you're gathering ithe</p>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="testi_slider owl-carousel">
+        			<div class="testi_item">
+        				<div class="row">
+        					<div class="col-lg-4">
+        						<img src="img/testimonials/t1.jpg" alt="">
+        					</div>
+        					<div class="col-lg-8">
+        						<div class="testi_text">
+        							<h4>Elite Martin</h4>
+									<p>Him, made can't called over won't there on divide there male fish beast own his day third seed sixth seas unto. Saw from </p>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="testi_item">
+        				<div class="row">
+        					<div class="col-lg-4">
+        						<img src="img/testimonials/t2.jpg" alt="">
+        					</div>
+        					<div class="col-lg-8">
+        						<div class="testi_text">
+        							<h4>Davil Saden</h4>
+									<p>Him, made can't called over won't there on divide there male fish beast own his day third seed sixth seas unto. Saw from </p>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="testi_item">
+        				<div class="row">
+        					<div class="col-lg-4">
+        						<img src="img/testimonials/t1.jpg" alt="">
+        					</div>
+        					<div class="col-lg-8">
+        						<div class="testi_text">
+        							<h4>Elite Martin</h4>
+									<p>Him, made can't called over won't there on divide there male fish beast own his day third seed sixth seas unto. Saw from </p>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="testi_item">
+        				<div class="row">
+        					<div class="col-lg-4">
+        						<img src="img/testimonials/t2.jpg" alt="">
+        					</div>
+        					<div class="col-lg-8">
+        						<div class="testi_text">
+        							<h4>Davil Saden</h4>
+									<p>Him, made can't called over won't there on divide there male fish beast own his day third seed sixth seas unto. Saw from </p>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="testi_item">
+        				<div class="row">
+        					<div class="col-lg-4">
+        						<img src="img/testimonials/t1.jpg" alt="">
+        					</div>
+        					<div class="col-lg-8">
+        						<div class="testi_text">
+        							<h4>Elite Martin</h4>
+									<p>Him, made can't called over won't there on divide there male fish beast own his day third seed sixth seas unto. Saw from </p>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        			<div class="testi_item">
+        				<div class="row">
+        					<div class="col-lg-4">
+        						<img src="img/testimonials/t2.jpg" alt="">
+        					</div>
+        					<div class="col-lg-8">
+        						<div class="testi_text">
+        							<h4>Davil Saden</h4>
+									<p>Him, made can't called over won't there on divide there male fish beast own his day third seed sixth seas unto. Saw from </p>
+        						</div>
+        					</div>
+        				</div>
+        			</div>
+        		</div>
+			</div>
+		</div>
+	</div>
+	<!--================ End Testimonial Area =================-->
 
-                100% {
-                    opacity: 1.0;
-                }
-            }
+	<!--================ Start Newsletter Area =================-->
+	<section class="newsletter_area">
+		<div class="container">
+			<div class="row justify-content-center align-items-center">
+				<div class="col-lg-12">
+					<div class="subscription_box text-center">
+						<h2 class="text-uppercase text-white">Thanks For Visit My Portfolio</h2>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Newsletter Area =================-->
 
-            .image-container {
-                margin-left: -20px;
-                margin-right: -20px;
-            }
+	<!--================Footer Area =================-->
+	<footer class="footer_area">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-12">
+					<div class="footer_top flex-column">
+						<div class="footer_logo">
+							<a href="#">
+								<img src="img/logo.png" alt="">
+							</a>
+							<h4>Follow Me</h4>
+						</div>
+						<div class="footer_social">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-dribbble"></i></a>
+							<a href="#"><i class="fa fa-behance"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row footer_bottom justify-content-center">
+				
+			</div>
+		</div>
+	</footer>
+	<!--================End Footer Area =================-->
 
-            #demo {
-                color: white;
-                font-size: 80;
-                text-shadow: 5px 0px 30px red;
-            }
-
-            #demo2 {
-                color: white;
-                font-size: 20;
-                text-shadow: 5px 0px 30px red;
-            }
-
-
-            .blink_me {
-                animation: blinker 1s linear infinite;
-            }
-
-            @keyframes blinker {
-                50% {
-                    opacity: 0;
-                }
-            }
-        </style>
-
-        <p><br><br><br>
-
-            <center></b>
-                <p id="demo"></p>
-                <p id="demo2">Nabi shallallahu ‘alaihi wa sallam juga memerintahkan memberikan upah sebelum keringat si
-                    pekerja
-                    kering. Dari ‘Abdullah bin ‘Umar, Nabi shallallahu ‘alaihi wa sallam bersabda,
-
-                    أَعْطُوا الأَجِيرَ أَجْرَهُ قَبْلَ أَنْ يَجِفَّ عَرَقُهُ
-
-                    “Berikan kepada seorang pekerja upahnya sebelum keringatnya kering.” (HR. Ibnu Majah, shahih).
-
-
-                </p>
-
-
-                <font class="blink_me" size="40" color="red" face="Wallpoet" style="text-shadow: 5px 0px 30px red;">
-                    BAYARKAN HAK KAMI...!!!!!!!!!</font>
-            </center></span><br><br>
-            <center>
-    </frame>
-    <font size="1" color="grey" face="Iceberg"> </font>
-    <div class="image-container">
-        <img class="img-responsive full-size" src="jungleland.jpeg">
-    </div>
-    <font size="1" color="grey" face="Iceberg"> <span style="color:white;" id="12"></span></font>
-    </center>
-    <b><b>
-            <div id="particles-js"> <canvas class="particles-js-canvas-el" style="width: 100%; height: 100%;"
-                    width="1365" height="949"></canvas></div>
-            <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>-->
-            <script type="text/javascript">
-                $.getScript(
-                    "https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js",
-                    function () {
-                        particlesJS('particles-js', {
-                            "particles": {
-                                "number": {
-                                    "value": 80,
-                                    "density": {
-                                        "enable": true,
-                                        "value_area": 800
-                                    }
-                                },
-                                "color": {
-                                    "value": "#ffffff"
-                                },
-                                "shape": {
-                                    "type": "circle",
-                                    "stroke": {
-                                        "width": 0,
-                                        "color": "#000000"
-                                    },
-                                    "polygon": {
-                                        "nb_sides": 5
-                                    },
-                                    "image": {
-                                        "width": 100,
-                                        "height": 100
-                                    }
-                                },
-                                "opacity": {
-                                    "value": 0.5,
-                                    "random": false,
-                                    "anim": {
-                                        "enable": false,
-                                        "speed": 1,
-                                        "opacity_min": 0.1,
-                                        "sync": false
-                                    }
-                                },
-                                "size": {
-                                    "value": 5,
-                                    "random": true,
-                                    "anim": {
-                                        "enable": false,
-                                        "speed": 40,
-                                        "size_min": 0.1,
-                                        "sync": false
-                                    }
-                                },
-                                "line_linked": {
-                                    "enable": true,
-                                    "distance": 150,
-                                    "color": "#ffffff",
-                                    "opacity": 0.4,
-                                    "width": 1
-                                },
-                                "move": {
-                                    "enable": true,
-                                    "speed": 6,
-                                    "direction": "none",
-                                    "random": false,
-                                    "straight": false,
-                                    "out_mode": "out",
-                                    "attract": {
-                                        "enable": false,
-                                        "rotateX": 600,
-                                        "rotateY": 1200
-                                    }
-                                }
-                            },
-                            "interactivity": {
-                                "detect_on": "canvas",
-                                "events": {
-                                    "onhover": {
-                                        "enable": true,
-                                        "mode": "repulse"
-                                    },
-                                    "onclick": {
-                                        "enable": true,
-                                        "mode": "push"
-                                    },
-                                    "resize": true
-                                },
-                                "modes": {
-                                    "grab": {
-                                        "distance": 400,
-                                        "line_linked": {
-                                            "opacity": 1
-                                        }
-                                    },
-                                    "bubble": {
-                                        "distance": 400,
-                                        "size": 40,
-                                        "duration": 2,
-                                        "opacity": 8,
-                                        "speed": 3
-                                    },
-                                    "repulse": {
-                                        "distance": 200
-                                    },
-                                    "push": {
-                                        "particles_nb": 4
-                                    },
-                                    "remove": {
-                                        "particles_nb": 2
-                                    }
-                                }
-                            },
-                            "retina_detect": true,
-                            "config_demo": {
-                                "hide_card": false,
-                                "background_color": "#b61924",
-                                "background_image": "",
-                                "background_position": "50% 50%",
-                                "background_repeat": "no-repeat",
-                                "background_size": "cover"
-                            }
-                        });
-                    });
-
-                var countDownDate = new Date("May , 20 2022 15:37:25").getTime();
-
-                // Update the count down every 1 second
-                var x = setInterval(function () {
-
-                    // Get today's date and time
-                    var now = new Date().getTime();
-
-                    // Find the distance between now and the count down date
-                    var distance = countDownDate - now;
-
-                    // Time calculations for days, hours, minutes and seconds
-                    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-                    // Display the result in the element with id="demo"
-                    document.getElementById("demo").innerHTML = days + "d " + hours + "h " +
-                        minutes + "m " + seconds + "s ";
-
-                    // If the count down is finished, write some text
-                    if (distance < 0) {
-                        clearInterval(x);
-                        document.getElementById("demo").innerHTML = "RANGER ORANGE & GREEN";
-
-
-
-                    }
-                }, 1000);
-            </script>
-
-        </b>
-        <br><br>
-        <center><br /></center>
-        <marquee scrollamount="30" behavior="alternate" width="100%">
-            <font size="3" <font color="white">______________________________________</font>
-        </marquee>
-        </font>
-        <center>
-            <font size="1" color="lightblue">
-                <marquee width="100%"><b><u>
-
-                            <br>
-                            <font face="iceberg" size="2px" color="red">OFFICIAL TEAM |
-                                <font size="2px" color="white" face="Iceberg">YOUR FRIEND</font><br>
-
-                    </b></u></marquee>
-        </center>
-        <marquee scrollamount="30" behavior="alternate" width="100%">
-            <font size="3">
-                <font color="white">_____________________________________________________</font>
-        </marquee>
-        </font>
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/stellar.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+	<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+	<script src="vendors/isotope/isotope-min.js"></script>
+	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/mail-script.js"></script>
+	<!--gmaps Js-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="js/gmaps.min.js"></script>
+	<script src="js/theme.js"></script>
 </body>
-</font>
-<br><span class="blink_me">
-    <font size="3" color="Red" face="Wallpoet" style="text-shadow: 5px 0px 27px red;">Powered By RANGER ORANGE
-        GREEN
-</span></center>
 
 </html>
