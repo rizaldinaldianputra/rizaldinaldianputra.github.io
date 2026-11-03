@@ -24,14 +24,52 @@ Author E-mail: naimlasker@gmail.com
 /* Mobile Layout: 320px */
 /* Wide Mobile Layout: 480px */
 /*---------------------------------------------------- */
+:root {
+  --primary: #0cebeb;
+  --secondary: #20e3b2;
+  --accent: #29ffc6;
+  --bg-dark: #090a0f;
+  --bg-card: rgba(18, 20, 29, 0.7);
+  --text-main: #e2e8f0;
+  --text-muted: #94a3b8;
+  --gradient-main: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  --gradient-hover: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+}
+
+/* Custom Cursor Styles */
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s, height 0.3s, background-color 0.3s;
+  mix-blend-mode: exclusion;
+}
+.cursor.hovered {
+  width: 50px;
+  height: 50px;
+  background-color: var(--accent);
+  opacity: 0.5;
+}
+/*----------------------------------------------------*/
 /*----------------------------------------------------*/
 body {
   line-height: 26px;
   font-size: 15px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  color: #777777;
-  background: url(../img/body-bg.png) no-repeat center; }
+  color: var(--text-muted);
+  background-color: var(--bg-dark); 
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(12, 235, 235, 0.15) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(32, 227, 178, 0.15) 0px, transparent 50%);
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
 
 h1,
 h2,
@@ -41,7 +79,7 @@ h5,
 h6 {
   font-family: "Rubik", sans-serif;
   font-weight: 500;
-  color: #000000; }
+  color: var(--text-main); }
 
 .list {
   list-style: none;
@@ -138,28 +176,16 @@ button:focus {
 /* Start Gradient Area css
 ============================================================================================ */
 .gradient-bg, .header_area .navbar .nav .nav-item.submenu ul .nav-item:hover .nav-link, .blog_right_sidebar .widget_title, .blog_right_sidebar .newsletter_widget .bbtns, .blog_right_sidebar .tag_cloud_widget ul li a:hover, .blog-pagination .page-item.active .page-link, .blog-pagination .page-link:hover, .comments-area .btn-reply:hover {
-  background: -webkit-linear-gradient(90deg, #4458dc 0%, #854fee 100%);
-  background: -moz-linear-gradient(90deg, #4458dc 0%, #854fee 100%);
-  background: -o-linear-gradient(90deg, #4458dc 0%, #854fee 100%);
-  background: linear-gradient(90deg, #4458dc 0%, #854fee 100%); }
+  background: var(--gradient-main); }
 
 .border-gradient {
-  border-image: -webkit-linear-gradient(90deg, #4458dc 0%, #854fee 100%);
-  border-image: -moz-linear-gradient(90deg, #4458dc 0%, #854fee 100%);
-  border-image: -o-linear-gradient(90deg, #4458dc 0%, #854fee 100%);
-  border-image: linear-gradient(90deg, #4458dc 0%, #854fee 100%); }
+  border-image: var(--gradient-main); }
 
 .gradient-bg2 {
-  background: -webkit-linear-gradient(90deg, #4458dc 0%, #854fee 100%);
-  background: -moz-linear-gradient(90deg, #4458dc 0%, #854fee 100%);
-  background: -o-linear-gradient(90deg, #4458dc 0%, #854fee 100%);
-  background: linear-gradient(90deg, #4458dc 0%, #854fee 100%); }
+  background: var(--gradient-main); }
 
 .gradient-color, .contact_info .info_item i {
-  background: -webkit-linear-gradient(90deg, #4458dc 0%, #854fee 100%);
-  background: -moz-linear-gradient(90deg, #4458dc 0%, #854fee 100%);
-  background: -o-linear-gradient(90deg, #4458dc 0%, #854fee 100%);
-  background: linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+  background: var(--gradient-main);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
 
@@ -167,7 +193,7 @@ button:focus {
 ============================================================================================ */
 .primary_btn {
   display: inline-block;
-  color: #fff;
+  color: var(--bg-dark);
   letter-spacing: 0px;
   font-family: "Rubik", sans-serif;
   font-weight: 500;
@@ -178,29 +204,29 @@ button:focus {
   cursor: pointer;
   text-transform: uppercase;
   border-radius: 5px;
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  background-image: linear-gradient(to right, #4458dc 0%, #854fee 100%), radial-gradient(circle at top left, #4458dc, #854fee);
-  border: double 2px transparent;
-  box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3); }
+  background: var(--gradient-main);
+  border: 2px solid transparent;
+  box-shadow: 0px 10px 30px rgba(12, 235, 235, 0.2);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
   .primary_btn span {
     padding: 0 42px; }
   .primary_btn.tr-bg {
-    background-image: linear-gradient(#ffffff, #ffffff), radial-gradient(circle at top left, #4458dc, #854fee);
-    border: 2px solid transparent;
-    color: #222222;
+    background: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
     box-shadow: none; }
     .primary_btn.tr-bg:hover {
-      background-image: linear-gradient(to right, #4458dc 0%, #854fee 100%), radial-gradient(circle at top left, #4458dc, #854fee);
-      border: double 2px transparent;
-      color: #ffffff;
-      box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3); }
+      background: var(--gradient-hover);
+      border: 2px solid transparent;
+      color: var(--bg-dark);
+      box-shadow: 0px 10px 30px rgba(12, 235, 235, 0.3);
+      transform: translateY(-3px); }
   .primary_btn:hover {
-    background-image: linear-gradient(#ffffff, #ffffff), radial-gradient(circle at top left, #4458dc, #854fee);
-    border: 2px solid #854fee;
-    color: #222222;
-    box-shadow: none;
-    background-clip: border-box; }
+    background: var(--gradient-hover);
+    color: var(--bg-dark);
+    box-shadow: 0px 15px 35px rgba(32, 227, 178, 0.4);
+    transform: translateY(-3px); }
 
 .overlay {
   position: absolute;
@@ -3304,3 +3330,115 @@ h6 {
 /*---------------------------------------------------- */
 
 /*# sourceMappingURL=style.css.map */
+
+
+/* ==========================================================================
+   Modern Portfolio Enhancements
+   ========================================================================== */
+.portfolio_box {
+  margin-bottom: 45px;
+  transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.portfolio_box:hover {
+  transform: translateY(-5px);
+}
+.single_portfolio {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  height: 250px;
+  background: #f1f3f8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease;
+}
+.portfolio_box:hover .single_portfolio {
+  box-shadow: 0 14px 28px rgba(133, 79, 238, 0.18);
+}
+.single_portfolio img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.portfolio_box:hover .single_portfolio img {
+  transform: scale(1.08);
+}
+.portfolio_category_badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background: rgba(133, 79, 238, 0.92);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+  z-index: 4;
+  letter-spacing: 0.5px;
+  pointer-events: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.portfolio_badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(20, 24, 33, 0.82);
+  backdrop-filter: blur(4px);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  z-index: 4;
+  letter-spacing: 0.3px;
+  pointer-events: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+.portfolio_box .short_info {
+  margin-top: 16px;
+  padding: 0 4px;
+}
+.portfolio_box .short_info h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  text-transform: none;
+  line-height: 1.3;
+}
+.portfolio_box .short_info h4 a {
+  color: #222222;
+  transition: color 0.2s ease;
+}
+.portfolio_box .short_info h4 a:hover {
+  color: #854fee;
+}
+.portfolio_box .short_info p {
+  color: #6c757d;
+  font-size: 13px;
+  margin-bottom: 6px;
+  line-height: 1.5;
+}
+.video-btn-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #854fee !important;
+  cursor: pointer;
+  margin-top: 2px;
+  transition: all 0.2s ease;
+}
+.video-btn-link i {
+  margin-right: 5px;
+  font-size: 14px;
+}
+.video-btn-link:hover {
+  color: #5d22d6 !important;
+  transform: translateX(3px);
+}

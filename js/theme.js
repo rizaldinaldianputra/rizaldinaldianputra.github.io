@@ -34,31 +34,58 @@
             Isotope js Starts
          --------------------------------------------- */
 	$(window).on('load', function() {
+		var $workGrid;
+		if (document.getElementById('portfolio')) {
+			$workGrid = $('.portfolio-grid').imagesLoaded(function() {
+				$workGrid.isotope({
+					itemSelector: '.all',
+					percentPosition: true,
+					masonry: {
+						columnWidth: '.all'
+					}
+				});
+			});
+		}
+
 		$('.portfolio-filter ul li').on('click', function() {
 			$('.portfolio-filter ul li').removeClass('active');
 			$(this).addClass('active');
 
 			var data = $(this).attr('data-filter');
-			$workGrid.isotope({
-				filter: data
-			});
+			if ($workGrid) {
+				$workGrid.isotope({
+					filter: data
+				});
+			}
 		});
-
-		if (document.getElementById('portfolio')) {
-			var $workGrid = $('.portfolio-grid').isotope({
-				itemSelector: '.all',
-				percentPosition: true,
-				masonry: {
-					columnWidth: '.all'
-				}
-			});
-		}
 	});
 
 	/*----------------------------------------------------*/
-	/* Start Magnific Pop Up
+	/* Start Magnific Pop Up (Per-Project Lightbox Gallery)
 	/*----------------------------------------------------*/
-	if ($('.img-gal').length > 0) {
+	if ($('.single_portfolio').length > 0) {
+		$('.single_portfolio').each(function() {
+			$(this).magnificPopup({
+				delegate: 'a.img-gal',
+				type: 'image',
+				gallery: {
+					enabled: true,
+					navigateByImgClick: true,
+					preload: [0, 2]
+				},
+				image: {
+					titleSrc: function(item) {
+						return item.el.attr('title') || '';
+					}
+				}
+			});
+		});
+
+		$(document).on('click', '.portfolio_title_btn', function(e) {
+			e.preventDefault();
+			$(this).closest('.portfolio_box').find('a.img-gal').first().trigger('click');
+		});
+	} else if ($('.img-gal').length > 0) {
 		$('.img-gal').magnificPopup({
 			type: 'image',
 			gallery: {
@@ -66,6 +93,29 @@
 			}
 		});
 	}
+
+	// Video Modal Trigger
+	$(document).on('click', '.video-modal-trigger', function(e) {
+		e.preventDefault();
+		var videoSrc = $(this).attr('data-video');
+		var videoTitle = $(this).attr('data-title') || 'Demo Video';
+		$('#portfolioVideoModalLabel').text(videoTitle);
+		var $video = $('#portfolioModalVideo');
+		$video.attr('src', videoSrc);
+		$('#portfolioVideoModal').modal('show');
+		if ($video[0]) {
+			$video[0].currentTime = 0;
+			$video[0].play();
+		}
+	});
+
+	$('#portfolioVideoModal').on('hidden.bs.modal', function () {
+		var $video = $('#portfolioModalVideo');
+		if ($video[0]) {
+			$video[0].pause();
+			$video.attr('src', '');
+		}
+	});
 	/*----------------------------------------------------*/
 	/*  End  Magnific Pop Up
 	/*----------------------------------------------------*/
