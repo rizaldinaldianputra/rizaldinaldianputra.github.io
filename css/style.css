@@ -24,52 +24,14 @@ Author E-mail: naimlasker@gmail.com
 /* Mobile Layout: 320px */
 /* Wide Mobile Layout: 480px */
 /*---------------------------------------------------- */
-:root {
-  --primary: #0cebeb;
-  --secondary: #20e3b2;
-  --accent: #29ffc6;
-  --bg-dark: #090a0f;
-  --bg-card: rgba(18, 20, 29, 0.7);
-  --text-main: #e2e8f0;
-  --text-muted: #94a3b8;
-  --gradient-main: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-  --gradient-hover: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
-}
-
-/* Custom Cursor Styles */
-.cursor {
-  width: 20px;
-  height: 20px;
-  border: 1px solid var(--accent);
-  border-radius: 50%;
-  position: fixed;
-  pointer-events: none;
-  z-index: 10000;
-  transform: translate(-50%, -50%);
-  transition: width 0.3s, height 0.3s, background-color 0.3s;
-  mix-blend-mode: exclusion;
-}
-.cursor.hovered {
-  width: 50px;
-  height: 50px;
-  background-color: var(--accent);
-  opacity: 0.5;
-}
-/*----------------------------------------------------*/
 /*----------------------------------------------------*/
 body {
   line-height: 26px;
   font-size: 15px;
   font-family: "Roboto", sans-serif;
   font-weight: 400;
-  color: var(--text-muted);
-  background-color: var(--bg-dark); 
-  background-image: 
-    radial-gradient(at 0% 0%, rgba(12, 235, 235, 0.15) 0px, transparent 50%),
-    radial-gradient(at 100% 100%, rgba(32, 227, 178, 0.15) 0px, transparent 50%);
-  background-attachment: fixed;
-  overflow-x: hidden;
-}
+  color: #777777;
+  background: url(../img/body-bg.png) no-repeat center; }
 
 h1,
 h2,
@@ -79,7 +41,7 @@ h5,
 h6 {
   font-family: "Rubik", sans-serif;
   font-weight: 500;
-  color: var(--text-main); }
+  color: #000000; }
 
 .list {
   list-style: none;
@@ -176,16 +138,28 @@ button:focus {
 /* Start Gradient Area css
 ============================================================================================ */
 .gradient-bg, .header_area .navbar .nav .nav-item.submenu ul .nav-item:hover .nav-link, .blog_right_sidebar .widget_title, .blog_right_sidebar .newsletter_widget .bbtns, .blog_right_sidebar .tag_cloud_widget ul li a:hover, .blog-pagination .page-item.active .page-link, .blog-pagination .page-link:hover, .comments-area .btn-reply:hover {
-  background: var(--gradient-main); }
+  background: -webkit-linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+  background: -moz-linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+  background: -o-linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+  background: linear-gradient(90deg, #4458dc 0%, #854fee 100%); }
 
 .border-gradient {
-  border-image: var(--gradient-main); }
+  border-image: -webkit-linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+  border-image: -moz-linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+  border-image: -o-linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+  border-image: linear-gradient(90deg, #4458dc 0%, #854fee 100%); }
 
 .gradient-bg2 {
-  background: var(--gradient-main); }
+  background: -webkit-linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+  background: -moz-linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+  background: -o-linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+  background: linear-gradient(90deg, #4458dc 0%, #854fee 100%); }
 
 .gradient-color, .contact_info .info_item i {
-  background: var(--gradient-main);
+  background: -webkit-linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+  background: -moz-linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+  background: -o-linear-gradient(90deg, #4458dc 0%, #854fee 100%);
+  background: linear-gradient(90deg, #4458dc 0%, #854fee 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; }
 
@@ -193,7 +167,7 @@ button:focus {
 ============================================================================================ */
 .primary_btn {
   display: inline-block;
-  color: var(--bg-dark);
+  color: #fff;
   letter-spacing: 0px;
   font-family: "Rubik", sans-serif;
   font-weight: 500;
@@ -204,29 +178,29 @@ button:focus {
   cursor: pointer;
   text-transform: uppercase;
   border-radius: 5px;
-  background: var(--gradient-main);
-  border: 2px solid transparent;
-  box-shadow: 0px 10px 30px rgba(12, 235, 235, 0.2);
-  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  background-image: linear-gradient(to right, #4458dc 0%, #854fee 100%), radial-gradient(circle at top left, #4458dc, #854fee);
+  border: double 2px transparent;
+  box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3); }
   .primary_btn span {
     padding: 0 42px; }
   .primary_btn.tr-bg {
-    background: transparent;
-    border: 2px solid var(--primary);
-    color: var(--primary);
+    background-image: linear-gradient(#ffffff, #ffffff), radial-gradient(circle at top left, #4458dc, #854fee);
+    border: 2px solid transparent;
+    color: #222222;
     box-shadow: none; }
     .primary_btn.tr-bg:hover {
-      background: var(--gradient-hover);
-      border: 2px solid transparent;
-      color: var(--bg-dark);
-      box-shadow: 0px 10px 30px rgba(12, 235, 235, 0.3);
-      transform: translateY(-3px); }
+      background-image: linear-gradient(to right, #4458dc 0%, #854fee 100%), radial-gradient(circle at top left, #4458dc, #854fee);
+      border: double 2px transparent;
+      color: #ffffff;
+      box-shadow: 0px 10px 30px rgba(118, 85, 225, 0.3); }
   .primary_btn:hover {
-    background: var(--gradient-hover);
-    color: var(--bg-dark);
-    box-shadow: 0px 15px 35px rgba(32, 227, 178, 0.4);
-    transform: translateY(-3px); }
+    background-image: linear-gradient(#ffffff, #ffffff), radial-gradient(circle at top left, #4458dc, #854fee);
+    border: 2px solid #854fee;
+    color: #222222;
+    box-shadow: none;
+    background-clip: border-box; }
 
 .overlay {
   position: absolute;
@@ -3331,9 +3305,8 @@ h6 {
 
 /*# sourceMappingURL=style.css.map */
 
-
 /* ==========================================================================
-   Modern Portfolio Enhancements
+   Modern Clean White Portfolio & Image Shimmer Optimization
    ========================================================================== */
 .portfolio_box {
   margin-bottom: 45px;
@@ -3347,26 +3320,73 @@ h6 {
   overflow: hidden;
   border-radius: 12px;
   height: 250px;
-  background: #f1f3f8;
+  background: #f8fafc;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
   transition: box-shadow 0.3s ease;
+  border: 1px solid #edf2f7;
 }
 .portfolio_box:hover .single_portfolio {
-  box-shadow: 0 14px 28px rgba(133, 79, 238, 0.18);
+  box-shadow: 0 14px 28px rgba(133, 79, 238, 0.15);
 }
-.single_portfolio img {
+
+/* Portfolio Thumbnail Wrapper & Shimmer */
+.portfolio_thumb_wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #f1f5f9;
+}
+
+.shimmer_loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #edf2f7;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0,
+    rgba(255, 255, 255, 0.6) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.6s infinite linear;
+  z-index: 1;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.portfolio_img_lazy {
+  position: relative;
+  z-index: 2;
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: top center;
-  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-.portfolio_box:hover .single_portfolio img {
-  transform: scale(1.08);
+
+.portfolio_img_lazy.loaded {
+  opacity: 1;
 }
+
+.portfolio_box:hover .portfolio_img_lazy {
+  transform: scale(1.06);
+}
+
 .portfolio_category_badge {
   position: absolute;
   top: 12px;
@@ -3382,15 +3402,15 @@ h6 {
   z-index: 4;
   letter-spacing: 0.5px;
   pointer-events: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
 }
 .portfolio_badge {
   position: absolute;
   top: 12px;
   right: 12px;
-  background: rgba(20, 24, 33, 0.82);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(4px);
-  color: #ffffff;
+  color: #334155;
   font-size: 11px;
   font-weight: 600;
   padding: 4px 10px;
@@ -3398,7 +3418,8 @@ h6 {
   z-index: 4;
   letter-spacing: 0.3px;
   pointer-events: none;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e2e8f0;
 }
 .portfolio_box .short_info {
   margin-top: 16px;
@@ -3412,14 +3433,14 @@ h6 {
   line-height: 1.3;
 }
 .portfolio_box .short_info h4 a {
-  color: #222222;
+  color: #1e293b;
   transition: color 0.2s ease;
 }
 .portfolio_box .short_info h4 a:hover {
   color: #854fee;
 }
 .portfolio_box .short_info p {
-  color: #6c757d;
+  color: #64748b;
   font-size: 13px;
   margin-bottom: 6px;
   line-height: 1.5;

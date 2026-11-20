@@ -308,7 +308,10 @@ def build_grid_html(projects):
 \t\t\t\t\t\t\t<div class="single_portfolio">
 \t\t\t\t\t\t\t\t<span class="portfolio_category_badge">{badge_cat}</span>
 \t\t\t\t\t\t\t\t{badge_html}
-\t\t\t\t\t\t\t\t<img class="img-fluid w-100" src="{cover_url}" alt="{title_esc}">
+\t\t\t\t\t\t\t\t<div class="portfolio_thumb_wrapper">
+\t\t\t\t\t\t\t\t\t<div class="shimmer_loader"></div>
+\t\t\t\t\t\t\t\t\t<img class="img-fluid w-100 portfolio_img_lazy" src="{cover_url}" alt="{title_esc}" loading="lazy" decoding="async" onload="this.classList.add(\'loaded\');">
+\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t<div class="overlay"></div>
 \t\t\t\t\t\t\t\t<a href="{cover_url}" class="img-gal" title="{title_esc}">
 \t\t\t\t\t\t\t\t\t<div class="icon">
